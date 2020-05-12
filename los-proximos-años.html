@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- THE BIG META -->
+<title>Los próximos años</title>  <!-- TRANSLATE -->
+	<meta name="description" content="una guía interactiva" />  <!-- TRANSLATE: content -->
+	<link rel="icon" type="image/png" href="favicon.png">
+	<meta charset="utf-8">
+	<base target="_blank">
+
+	<!-- Twitter Card data -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="¿Qué pasará ahora? Los futuros de la COVID-19 explicados con simulaciones">  <!-- TRANSLATE: content -->
+	<meta name="twitter:description" content="una guía interactiva">  <!-- TRANSLATE: content -->
+	<meta name="twitter:image" content="https://vrruiz.github.io/covid-19/sharing/es_ES/thumbnail.png">
+
+	<!-- Open Graph data -->
+	<meta property="og:title" content="¿Qué pasará ahora? Los futuros de la COVID-19 explicados con simulaciones">  <!-- TRANSLATE: content -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://vrruiz.github.io/covid-19/">
+	<meta property="og:image" content="https://vrruiz.github.io/covid-19/sharing/es_ES/thumbnail.png">
+	<meta property="og:description" content="una guía interactiva">  <!-- TRANSLATE: content -->
+	<meta property="og:site_name" content="¿Qué pasará ahora? Los futuros de la COVID-19 explicados con simulaciones">  <!-- TRANSLATE: content -->
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="css/littlefoot.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+
+</head>
+
+<body>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- SIDEBARS  - - - - - - - - - - - - - - - - - -->
+<!-- - - - - - - - - - - - - - - - - - - - - - - -->
+
+<div id="translations">
+	<a href='https://ncase.me/covid-19'>English</a>
+	<a href='https://vrruiz.github.io/covid-19'>Español</a>
+	<a href='https://github.com/ncase/covid-19#how-to-translate'>
+		¿Quieres ayudar a traducir?
+	</a>
+</div>
+
+<div id="sharing">
+	Ayuda a que esta guía
+	consiga R &gt; 1:
+	<br>
+	<span id='share_title'>
+		¿Qué pasará ahora? Los futuros de la COVID-19 explicados con simulaciones
+	</span>
+	<span id='share_desc'>
+		🔬 ¡Una introducción profunda! 30 min lectura/juego:
+	</span>
+	<span class='shareables' style='display:block; margin-top:7px; opacity:0.75'></span>
+</div>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- THE ACTUAL ARTICLE - - - - - - - - - - - - - -->
+<!-- COPY PASTE YOUR EXPORT FROM WORDS.MD INTO HERE - - -->
+<!-- - - - - - - - - - - - - - - - - - - - - - - -->
+
+<article>
+	<div class="section chapter">
+		<div>
+			<img src="banners/curve.png" height="480" style="position: absolute;">
+			<div>Los próximos años</div>
+		</div>
+	</div>
+	<p>Te contagias del COVID-19 y te recuperas. O llegas a la vacuna del COVID-19. En cualquier caso, ahora eres inmune...</p>
+	<p>...<em>¿durante cuanto tiempo?</em></p>
+	<ul>
+	<li>El pariente más cercano del COVID-19 es el SARS, cuyos supervivientes tuvieron 2 años de inmunidad.[^SARS immunity]</li>
+	<li>Los conarovirus que causan el resfriado común te dan 8 meses de inmunidad.[^cold immunity]</li>
+	<li>Hay informes de personas recuperadas del COVID-19 que luego han vuelto a dar positivo pero no está claro si han dado falsos positivos.<sup class="footnote-ref"><a href="#fn35" id="fnref35">[35]</a></sup></li>
+	<li>Y un estudio <em>aún no revisado por pares</em> con monos muestran inmunidad al coronavirus del COVID-19 durante al menos 28 días.<sup class="footnote-ref"><a href="#fn36" id="fnref36">[36]</a></sup></li>
+	</ul>
+	<p>Pero para el COVID-19 <em>en humanos</em>, al 1 de mayo de 2020, la gran incógnita es «hasta cuándo».</p>
+	<p>[^SARS immunity]: «SARS-specific antibodies were maintained for an average of 2 years [...] Thus, SARS patients might be susceptible to reinfection ≥3 years after initial exposure». <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2851497/">Wu LP, Wang NC, Chang YH, et al.</a> «Por desgracia», nunca sabremos cuánto dura la inmunidad al SARS, puesto que se erradicó rápidamente.</p>
+	<p>[^cold immunity]: «We found no significant difference between the probability of testing positive at least once and the probability of a recurrence for the beta-coronaviruses HKU1 and OC43 at 34 weeks after enrollment/first infection». <a href="http://www.columbia.edu/~jls106/galanti_shaman_ms_supp.pdf">Marta Galanti &amp; Jeffrey Shaman (PDF)</a></p>
+	<p>Para estas simulaciones, digamos que es 1 año.
+	<strong>Esta simulación comienza con 100% <icon r=""></icon></strong>, disminuyendo exponencialmente en susceptibles, <icon s=""></icon>s sin inmunidad después de un año, de <em>promedio</em>, con variación:</p>
+	<div class="sim">
+		<iframe src="sim?stage=yrs-1&amp;format=lines&amp;height=600" width="800" height="600"></iframe>
+	</div>
+	<p>¡El regreso de la disminución exponencial!</p>
+	<p>Este es el <strong>modelo SEIRS</strong>. La «S» es por las personas <icon s=""></icon> Susceptibles, de nuevo.</p>
+	<p><img src="pics/es_ES/seirs.png" alt=""></p>
+	<p>Ahora, vamos a simular un brote del COVID-19, durante 10 años, sin intervenciones... <em>si la inmunidad sólo durase un año:</em></p>
+	<div class="sim">
+		<iframe src="sim?stage=yrs-2&amp;format=lines&amp;height=600" width="800" height="600"></iframe>
+	</div>
+	<p>En simulaciones anteriores, solo teníamos <em>un</em> pico que sobrepasaba las UCIs. Ahora, tenemos muchos <em>y</em> los casos <icon i=""></icon> se equilibran <em>permanentemente en</em> la capacidad de UCIs. (Que, recuerda, hemos <em>triplicado</em> para estas simulaciones).</p>
+	<p>R = 1, es <strong>endémico.</strong></p>
+	<p>Por fortuna, dado que el verano reduce R, la situación mejorará:</p>
+	<div class="sim">
+		<iframe src="sim?stage=yrs-3&amp;format=lines&amp;height=640" width="800" height="640"></iframe>
+	</div>
+	<p>Oh.</p>
+	<p>De forma contraintuitiva, ¡el verano hace que los picos empeoren <em>y</em> sean más frecuentes! Esto es debido a que el verano reduce las nuevas <icon i=""></icon>s, pero por otra parte reduce las nuevas <icon r=""></icon>s inmunes. Lo que significa que la inmunidad se desploma en el verano <em>creando</em> grandes picos frecuentes en el invierno.</p>
+	<p>Por fortuna, la solución a este problema es bastante sencilla: solo hay que vacunar a la población en cada otoño/invierno, como hacemos con las vacunas de la gripe:</p>
+	<p><strong>(Después de ver la grabación, ¡intenta simular tus propias campañas de vacunación! Recuerda que puedes detener/continuar la simulación en cualquier momento).</strong></p>
+	<div class="sim">
+		<iframe src="sim?stage=yrs-4&amp;format=lines" width="800" height="540"></iframe>
+	</div>
+	<p>Pero aquí hay una pregunta más aterradora:</p>
+	<p>¿Y qué pasa si durante <em>años</em> no hay ninguna vacuna? ¿O <em>nunca</em>?</p>
+	<p><strong>Seamos claros: esto es muy poco probable.</strong> La mayoría de epidemiólogos piensan que habrá una vacuna para 2021 o 2022. Por supuesto, nunca ha habido una vacuna para ninguno de los otros coronavirus, pero eso fue porque el SARS se erradicó rápidamente, y para «el» resfriado común dicho esfuerzo no ha valido la pena.</p>
+	<p>Aún así, los investigadores de enfermedades contagiosas han expresado sus temores: ¿Y si no podemos hacer suficientes?<sup class="footnote-ref"><a href="#fn37" id="fnref37">[37]</a></sup> ¿Qué pasa si nos damos prisa y al final no es segura?<sup class="footnote-ref"><a href="#fn38" id="fnref38">[38]</a></sup></p>
+	<p>Incluso en el escenario «sin vacuna», aún tenemos 3 maneras de escapar. De la más a la menos espantosa:</p>
+	<ol>
+	<li>
+	<p>Hacer intervenciones R &lt; 1 intermitentes o suaves para llegar a la «inmunidad de grupo». (Aviso: esto implica muchas muertes y muchos pulmones dañados. <em>Y</em> no funciona si la inmunidad no es duradera).</p>
+	</li>
+	<li>
+	<p>Hacer que las intervenciones R &lt; 1 sean persistentes. El rastreo de contactos y las mascarillas se convierten en la nueva normalidad en el mundo post-COVID-19, igual que las pruebas ITC y llevar condón se convirtieron en la norma en el mundo post-VIH.</p>
+	</li>
+	<li>
+	<p>Hacer intervenciones R &lt; 1 hasta que se desarrollen tratamientos para la COVID-19 con los que sea mucho, mucho, mucho menos probable la necesidad de cuidados intensivos. (Lo que deberíamos hacer <em>¡en cualquier caso!</em>) La reducción del uso de UCIs por 10x es lo mismo que incrementar nuestra capacidad de UCIs por 10x:</p>
+	</li>
+	</ol>
+	<p><strong>Aquí hay una simulación en la que <em>no</em> hay una inmunidad duradera, <em>no hay</em> vacuna, e incluso no hay ninguna intervención, solo un incremento lento de la capacidad para sobrevivir a los picos de largo plazo:</strong></p>
+	<div class="sim">
+		<iframe src="sim?stage=yrs-5&amp;format=lines" width="800" height="540"></iframe>
+	</div>
+	<p>Incluso en el <em>peor</em> de los peores escenarios... la vida prevalece.</p>
+	<p>. . .</p>
+	<p>Quizás quieras cuestionar nuestras suposiciones e intentar unos R<sub>0</sub>s diferentes u otros números. ¡O intentar simular tu <em>propia</em> combinación de planes de intervención!</p>
+	<p><strong>Aquí hay un «zona de juego» (opcional), con <em>todo</em> disponible. (deslizar para ver todos los controles) ¡Simula y juega tanto como quieras!:</strong></p>
+	<div class="sim">
+		<iframe src="sim?stage=SB&amp;format=sb" width="800" height="540"></iframe>
+	</div>
+	<p>Este «simulador de vuelo de epidemias» básico nos ha enseñado mucho. Nos ha permitido encontrar respuestas a dudas que teníamos sobre los pasados meses, los próximos meses y los próximos años.</p>
+	<p>Así que, finalmente, regresemos a...</p>
+	<div class="section chapter">
+		<div>
+			<img src="banners/curve.png" height="480" style="position: absolute;">
+			<div>El ahora</div>
+		</div>
+	</div>
+	<p>El avión se ha hundido. Hemos corrido a los botes salvavidas. Ahora es momento de encontrar tierra firme.<sup class="footnote-ref"><a href="#fn39" id="fnref39">[39]</a></sup></p>
+	<p>Equipos de epidemiólogos y políticos de la (<a href="https://www.americanprogress.org/issues/healthcare/news/2020/04/03/482613/national-state-plan-end-coronavirus-crisis/">izquierda</a>, la <a href="https://www.aei.org/research-products/report/national-coronavirus-response-a-road-map-to-reopening/">derecha</a> y <a href="https://ethics.harvard.edu/covid-roadmap">multi-partidistas</a>) han llegado al consenso de que para ganar a la COVID-19 debemos proteger nuestras vidas <em>y</em> libertades.</p>
+	<p>Esta es la idea general, con algunos planes de contingencia (sin consenso):</p>
+	<p><img src="pics/es_ES/plan.png" alt=""></p>
+	<p>¿Qué es lo que esto implica para TÍ, ahora mismo?</p>
+	<p><strong>Para todos:</strong> Respeta el confinamiento para que podamos pasar de la Fase 1 rápidamente. Mantén limpias esas manos. Fabrica tus propias mascarillas. Descarga una aplicación de rastreo de contactos <em>que proteja la privacidad</em> cuando estén disponibles el próximo mes. Mantente sano ¡física y mentalmente!</p>
+	<p><strong>Para políticos:</strong> Promulga leyes que apoyen a quienes tienen que auto-aislarse/hacer cuarentena. Contrata muchos más rastreadores de contactos, <em>apoyados</em> por aplicaciones aplicaciones de rastreo de contactos que protejan la privacidad. Ofrece más fondos a cosas que deberíamos estar fabricando, como...</p>
+	<p><strong>Para fabricantes:</strong> Haz pruebas. Fabrica ventiladores. Fabrica equipo de protección individual para los hospitales. Haz aplicaciones. Haz antivirales, profilácticos y otros tratamientos que no son vacunas. Fabrica vacunas. Haz pruebas. Haz pruebas. Haz pruebas. Da esperanzas.</p>
+	<p>No subestimemos el miedo para dar esperanzas. Nuestro miedo debería <em>hacer equipo</em> con nuestra esperanza, como los inventores de los aviones y los paracaídas. <em>Creamos</em> un futuro esperanzado preparándonos para futuros horribles.</p>
+	<p>La única cosa a temer es la idea de que la única cosa a temer es al miedo mismo.</p>
+	<hr class="footnotes-sep">
+	<section class="footnotes">
+	<ol class="footnotes-list">
+	<li id="fn1" class="footnote-item"><p>«The mean [serial] interval was 3.96 days (95% CI 3.53–4.39 days)». <a href="https://wwwnc.cdc.gov/eid/article/26/6/20-0357_article">Du Z, Xu X, Wu Y, Wang L, Cowling BJ, Ancel Meyers L</a> (Aviso: La publicación temprana de estos artículos no están consideradas como versiones finales) <a href="#fnref1" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn2" class="footnote-item"><p><strong>Recuerda: todas estas simulaciones están muy simplificadas por motivos didácticos.</strong> <a href="#fnref2" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn3" class="footnote-item"><p>«The median communicable period [...] was 9.5 days». <a href="https://link.springer.com/article/10.1007/s11427-020-1661-4">Hu, Z., Song, C., Xu, C. et al</a> Sí, sabemos que la «mediana» no es lo mismo que la «media». Pero para propósitos educativos, se parecen bastante. <a href="#fnref3" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn4" class="footnote-item"><p>Para más detalles técnicos del modelo SIR, consultar <a href="https://www.idmod.org/docs/hiv/model-sir.html#">Institute for Disease Modeling</a> y <a href="https://es.wikipedia.org/wiki/Modelo_SIR">Wikipedia</a> <a href="#fnref4" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn5" class="footnote-item"><p>Para más explicaciones técnicas del modelo SEIR, consultar <a href="https://www.idmod.org/docs/hiv/model-seir.html">Institute for Disease Modeling</a> and <a href="https://es.wikipedia.org/wiki/Modelaje_matem%C3%A1tico_de_epidemias#Modelo_SEIR">Wikipedia</a> <a href="#fnref5" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn6" class="footnote-item"><p>«Assuming an incubation period distribution of mean 5.2 days from a separate study of early COVID-19 cases, we inferred that infectiousness started from 2.3 days (95% CI, 0.8–3.0 days) before symptom onset». (Traducción: Si asumimos que los síntomas comienzan a los 5 días, la fase infecciosa comienza 2 días antes = la contagiosidad comienza a los 3 días) <a href="https://www.nature.com/articles/s41591-020-0869-5">He, X., Lau, E.H.Y., Wu, P. et al.</a> <a href="#fnref6" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn7" class="footnote-item"><p>«The median R value for seasonal influenza was 1.28 (IQR: 1.19–1.37)» <a href="https://bmcinfectdis.biomedcentral.com/articles/10.1186/1471-2334-14-480">Biggerstaff, M., Cauchemez, S., Reed, C. et al.</a> <a href="#fnref7" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn8" class="footnote-item"><p>«We estimated the basic reproduction number R0 of 2019-nCoV to be around 2.2 (90% high density interval: 1.4–3.8)» <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7001239/">Riou J, Althaus CL.</a> <a href="#fnref8" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn9" class="footnote-item"><p>«we calculated a median R0 value of 5.7 (95% CI 3.8–8.9)» <a href="https://wwwnc.cdc.gov/eid/article/26/7/20-0282_article">Sanche S, Lin YT, Xu C, Romero-Severson E, Hengartner N, Ke R.</a> <a href="#fnref9" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn10" class="footnote-item"><p>Esto asume que una persona es igual de contagiosa durante todo el periodo infeccioso. De nuevo, es una simplificación en aras de la didáctica. <a href="#fnref10" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn11" class="footnote-item"><p>Recuerda R = R<sub>0</sub> * la tasa de contagios aún permitidos. Recuerda también que la tasa de contagios permitidos = 1 - tasa de contagios <em>evitados</em>. <a href="#fnref11" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn12" class="footnote-item"><p><a href="https://www.statista.com/statistics/1105420/covid-icu-admission-rates-us-by-age-group/">«Percentage of COVID-19 cases in the United States from February 12 to March 16, 2020 that required intensive care unit (ICU) admission, by age group»</a>. Entre el 4.9% y el 11.5% de <em>todos</em> los casos de COVID-19 necesitan UCI. Si de forma optimista seleccionamos el rango inferior, eso es el 5% o 1 de cada 20. Observa que este total es específico para la estructura de edades de EEUU y será más alto en países con poblaciones más viejas y menor en países con poblaciones más jóvenes. <a href="#fnref12" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn13" class="footnote-item"><p>«Number of ICU beds = 96,596». De la <a href="https://sccm.org/Blog/March-2020/United-States-Resource-Availability-for-COVID-19">Society of Critical Care Medicine</a> EEUU tiene una población de 328,200,000 en 2019. 96,596 de 328,200,000 = aproximadamente 1 de 3400. <a href="#fnref13" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn14" class="footnote-item"><p>«He says that the actual goal is the same as that of other countries: flatten the curve by staggering the onset of infections. As a consequence, the nation may achieve herd immunity; it’s a side effect, not an aim. [...] The government’s actual coronavirus action plan, available online, doesn’t mention herd immunity at all». <a href="#fnref14" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn15" class="footnote-item"><p>«All eight eligible studies reported that handwashing lowered risks of respiratory infection, with risk reductions ranging from 6% to 44% [pooled value 24% (95% CI 6–40%)]». En aras de la simplicidad, en estas simulaciones hemos redondeado el valor hasta 25%. <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1365-3156.2006.01568.x">Rabie, T. y Curtis, V.</a> Nota: tal y como este meta-análisis indica, la calidad de las medidas sobre el lavado de manos (al menos en los países desarrollados) son pésimas. <a href="#fnref15" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn16" class="footnote-item"><p>«We found a 73% reduction in the average daily number of contacts observed per participant. This would be sufficient to reduce R0 from a value from 2.6 before the lockdown to 0.62 (0.37 - 0.89) during the lockdown». En aras de la simplicidad, para esta simulación lo hemos redondeado al 70%. <a href="https://cmmid.github.io/topics/covid19/comix-impact-of-physical-distance-measures-on-transmission-in-the-UK.html">Jarvis y Zandvoort et al</a> <a href="#fnref16" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn17" class="footnote-item"><p>La distorsión desaparecería si se mostrase a R en una escala logarítmica... pero entonces tendríamos que explicar las <em>escalas logarítmicas.</em> <a href="#fnref17" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn18" class="footnote-item"><p>«Absent other interventions, a key metric for the success of social distancing is whether critical care capacities are exceeded. To avoid this, prolonged or intermittent social distancing may be necessary into 2022». <a href="https://science.sciencemag.org/content/early/2020/04/14/science.abb5793">Kissler y Tedijanto et al</a> <a href="#fnref18" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn19" class="footnote-item"><p>Ver <a href="https://journals.sagepub.com/doi/abs/10.1177/1745691614568352">Figura 6 de Holt-Lunstad &amp; Smith 2010</a>. Por supuesto, hay que advertir que lo que encontraron fue una <em>correlación</em>. Pero a menos que quieras incomunicar a una selección aleatoria de personas de por vida, la evidencia observacional es lo único que vamos a tener. <a href="#fnref19" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn20" class="footnote-item"><p><strong>3 días en promedio de contagiosidad:</strong> «Assuming an incubation period distribution of mean 5.2 days from a separate study of early COVID-19 cases, we inferred that infectiousness started from 2.3 days (95% CI, 0.8–3.0 days) before symptom onset» (traducción: Asumiendo que los síntomas comienzan a los 5 días, la contagiosidad comienza 2 días antes = La contagiosidad comienza a los 3 días) <a href="https://www.nature.com/articles/s41591-020-0869-5">He, X., Lau, E.H.Y., Wu, P. et al.</a> <a href="#fnref20" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn21" class="footnote-item"><p>«We estimated that 44% (95% confidence interval, 25–69%) of secondary cases were infected during the index cases’ presymptomatic stage» <a href="https://www.nature.com/articles/s41591-020-0869-5">He, X., Lau, E.H.Y., Wu, P. et al</a> <a href="#fnref21" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn22" class="footnote-item"><p>«Contact tracing was a critical intervention in Liberia and represented one of the largest contact tracing efforts during an epidemic in history.» <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6152989/">Swanson KC, Altare C, Wesseh CS, et al.</a> <a href="#fnref22" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn23" class="footnote-item"><p><a href="https://github.com/TCNCoalition/TCN#tcn-protocol">Temporary Contact Numbers, a decentralized, privacy-first contact tracing protocol</a> <a href="#fnref23" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn24" class="footnote-item"><p><a href="https://pact.mit.edu/">PACT: Private Automated Contact Tracing</a> <a href="#fnref24" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn25" class="footnote-item"><p><a href="https://www.apple.com/ca/newsroom/2020/04/apple-and-google-partner-on-covid-19-contact-tracing-technology/">Apple and Google partner on COVID-19 contact tracing technology</a>. Ten en cuenta que no están desarrollando las aplicaciones <em>ellos mismos</em>, solo creando los sistemas que darán <em>soporte</em> a dichas aplicaciones. <a href="#fnref25" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn26" class="footnote-item"><p>Hay muchas noticias  –y, sinceramente, muchos artículos científicos– que no distinguen entre «casos que no han mostrado síntomas cuando les hicimos la prueba» (pre-sintomáticos) y «casos que <em>nunca</em> mostraron síntomas» (asintomáticos reales). La única manera de hallar la diferencia es mediante un seguimiento pormenorizado de los casos. <a href="#fnref26" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn27" class="footnote-item"><p>Del mismo estudio de Oxford que primero recomendó el uso de aplicaciones para rastrear contactos en el caso de la COVID-19: <a href="https://science.sciencemag.org/content/early/2020/04/09/science.abb6936/tab-figures-data">Luca Ferretti &amp; Chris Wymant et al</a> Véase la figura 2. Si se asume que R<sub>0</sub> = 2.0, encontraron que: <a href="#fnref27" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn28" class="footnote-item"><p>«None of these surgical masks exhibited adequate filter performance and facial fit characteristics to be considered respiratory protection devices». <a href="https://www.sciencedirect.com/science/article/pii/S0196655307007742">Tara Oberg y Lisa M. Brosseau</a> <a href="#fnref28" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn29" class="footnote-item"><p>«The overall 3.4 fold reduction [70% reduction] in aerosol copy numbers we observed combined with a nearly complete elimination of large droplet spray demonstrated by Johnson et al. suggests that surgical masks worn by infected persons could have a clinically significant impact on transmission». <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3591312/">Milton DK, Fabian MP, Cowling BJ, Grantham ML, McDevitt JJ</a> <a href="#fnref29" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn30" class="footnote-item"><p>Cualquier científico de verdad que lea la última frase estará riéndose-llorando ahora mismo. Ver: <a href="https://en.wikipedia.org/wiki/Data_dredging">p-hacking</a>, <a href="https://es.wikipedia.org/wiki/Crisis_de_replicaci%C3%B3n">la crisis de replicación</a>) <a href="#fnref30" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn31" class="footnote-item"><p>«It is time to apply the precautionary principle» <a href="https://www.bmj.com/content/bmj/369/bmj.m1435.full.pdf">Trisha Greenhalgh et al [PDF]</a> <a href="#fnref31" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn32" class="footnote-item"><p><a href="https://www.cambridge.org/core/journals/disaster-medicine-and-public-health-preparedness/article/testing-the-efficacy-of-homemade-masks-would-they-protect-in-an-influenza-pandemic/0921A05A69A9419C862FA2F35F819D55">Davies, A., Thompson, K., Giri, K., Kafatos, G., Walker, J., &amp; Bennett, A</a> Véase la tabla 1: una camiseta de algodón 100% tiene 2/3 de la eficiencia de transmisión de una mascarilla quirúrgica, para los dos aerosoles que probaron. <a href="#fnref32" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn33" class="footnote-item"><p><strong>«Necesitamos los suministros para los hospitales».</strong> <em>Sin discusión.</em> Pero ese argumento es para incrementar la producción no para el racionamiento. Mientras tanto, podemos fabricar mascarillas caseras. <a href="#fnref33" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn34" class="footnote-item"><p>«One-degree Celsius increase in temperature [...] lower[s] R by 0.0225» y «The average R-value of these 100 cities is 1.83”. 0.0225 ÷ 1.83 = ~1.2». <a href="https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=3551767">Wang, Jingyuan y Tang, Ke and Feng, Kai and Lv, Weifeng</a> <a href="#fnref34" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn35" class="footnote-item"><p>«Once a person fights off a virus, viral particles tend to linger for some time. These cannot cause infections, but they can trigger a positive test». <a href="https://www.statnews.com/2020/04/20/everything-we-know-about-coronavirus-immunity-and-antibodies-and-plenty-we-still-dont/">de STAT News por Andrew Joseph</a> <a href="#fnref35" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn36" class="footnote-item"><p>De <a href="https://www.biorxiv.org/content/10.1101/2020.03.13.990226v1.abstract">Bao et al.</a> <em>Aviso: Este es un borrador de artículo y no ha sido certificado por la revisión por pares (aún).</em> También es importante hacer hincapié: solamente probaron la reinfección 28 días después. <a href="#fnref36" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn37" class="footnote-item"><p>«If a coronavirus vaccine arrives, can the world make enough?» <a href="https://www.nature.com/articles/d41586-020-01063-8">por Roxanne Khamsi, en Nature</a> <a href="#fnref37" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn38" class="footnote-item"><p>«Don’t rush to deploy COVID-19 vaccines and drugs without sufficient safety guarantees» <a href="https://www.nature.com/articles/d41586-020-00751-9">por Shibo Jiang, en Nature</a> <a href="#fnref38" class="footnote-backref">↩</a></p>
+	</li>
+	<li id="fn39" class="footnote-item"><p>La metáfora de la tierra firme es <a href="https://www.statnews.com/2020/04/01/navigating-covid-19-pandemic/">de Marc Lipsitch y Yonatan Grad, en STAT News</a> <a href="#fnref39" class="footnote-backref">↩</a></p>
+	</li>
+	</ol>
+    </section>
+    
+	<p><a href="https://accounts.google.com/o/saml2/initsso?idpid=C00r0m6xq&spid=588425725261&forceauthn=false"> Por favor regresa a KIOs Got Talent y realiza la evaluación de este módulo</a></p>
+	
+	<br><br><br><br><br><br>
+
+</article>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- THE FOOTER  - - - - - - - - - - - - - - - - -->
+<!-- - - - - - - - - - - - - - - - - - - - - - - -->
+
+<div id="footer">
+
+	<div>
+
+		Ayuda a que este artículo consiga R > 1: <span class='shareables in_footer' style='position: relative; top: 17px; right: -6px;'></span>
+		<br><br>
+		Esta guía es
+		<br>
+		<img src='sharing/cc0.png' style="margin-right: 10px; margin-top: 10px; width: 120px;"/>
+		<b style='font-size: 100px;position: relative;top: -20px;'>
+			DOMINIO PÚBLICO
+		</b>
+		Lo que significa que <i>ya</i> tienes permiso para reutilizar y remezclar
+		cualquier dibujo/código/palabras de esta página – en blogs, sitios de noticias, clases, ¡en cualquier sitio!
+		<a href='https://github.com/ncase/covid-19'>
+			(Echa un ojo a nuestro código en Github)
+		</a>
+		<br>
+		<b>
+			Recuerda dar crédito a
+			<a href='https://scholar.google.com/citations?user=_wHMGkUAAAAJ&hl=en'>Marcel Salathé</a>
+			y
+			<a href='https://ncase.me/'>Nicky Case</a>
+			(mayo 2020).
+			Traducción al español por <a href='https://twitter.com/vrruiz'>Víctor R. Ruiz</a>.
+		</b>
+
+
+		<br><br>
+
+		Esta guía gratuita y libre ha sido posible gracias a
+		los patronos de Nicky en Patreon.
+		Si (en serio, SOLO SI) tienes ingresos disponibles en estos duros momentos, podrías
+		<a href='https://www.patreon.com/ncase'>¡tirarle algunas monedas a Nicky!</a>
+		Si no, puedes compartir esta guía o
+		<a href='https://ncase.me/'>consultar otros materiales educativos/interactivos</a>.
+		(perfecto para la enseñanza en casa en caso de que, pongamos, las escuelas estuvieran cerradas
+		debido a una pandemia).
+
+		<br><br>
+
+		Aquí están algunos de los patronos que han hecto esto posible: 💖
+
+		<br><br>
+
+		<div id="supporters">
+			9_9<br>Aaron Steelman<br>Abdallah AbuHashem<br>Adam Zeiner<br>Aeryn Light<br>Agent Entity<br>Ahti Ahde<br>Aimee Jarboe<br>Akito INOUE<br>Aldebarb <br>alex <br>Alex Kreitzberg<br>Alexander Zacherl<br>Alexis Olson<br>Allison Clift-Jennings<br>Amy Fuchs<br>Amy Traylor<br>Andre Latchman<br>Andrea Chlebikova<br>Andrea Di Biagio<br>Andrew Sachs<br>Andy Ellis<br>Anton Eremin<br>Apollo Slater<br>Aria Minaei<br>Armelle Laine<br>Arvand Barghi<br>Aurimas<br>B Cavello<br>Ben Kraft<br>Benoit Doidic<br>Berk Gedik<br>Brandon Quinn<br>Brendan Nelligan<br>Brian Handy<br>Brian Lange<br>Bruce Steinberg<br>Caelyn McAulay<br>Caio Vinicius do Nascimento<br>Cassandra Xia<br>Catherine J Smith<br>Cathy Deng<br>Cedric Nering<br>Chad Sansing<br>Charlie Stigler<br>Chong Kee Tan<br>Choose A Username<br>Chris Hallacy<br>Chris Makler<br>Chris Ploeg<br>Christine Capra<br>Christopher Ferrie<br>Christopher Walker<br>Clive Freeman<br>Colin Anderson<br>Colin Liotta<br>Connie <br>Corey Girard<br>count <br>Cristy Stone<br>Curtis Frye<br>Cyrus Levy<br>D <br>Da LIberman<br>Dag Frode Solberg<br>Damien Bernard<br>Daniel Shiffman<br>Daniel Teitelbaum<br>Dante <br>Darius Bacon<br>Dave B.<br>Dave Tu<br>David E Weekly<br>David Mora<br>Denis <br>Dominik <br>Duilio Palacios<br>Dylan Field<br>Eldecrok <br>Eric Chisholm<br>Ernst Scholtz<br>Ethan Muller<br>Eugene Eric Kim<br>Evan Rocha<br>Evan Shulman<br>Fanboat <br>Fiona Nielsen<br>Florencia Herra Vega<br>FlyingRat <br>Gabriel Barbosa Nunes<br>Gargi Sharma<br>Gary Coulter<br>Gauthier Muguerza<br>Glen E. Ivey<br>Grävling <br>Green <br>Greg <br>Guy Chapman<br>Harry Brisson<br>HI <br>Hilary Fried<br>Hildegard von Bigass<br>Idahosa Ness<br>ikrima <br>IndustrialRobot <br>Ivar Troost<br>Ivo Murrell<br>J C<br>Jacob Christian Munch-Andersen<br>James <br>James Horton<br>Jan Kölling<br>Jared Cosulich<br>Jason Crawford<br>Jay Mitchell<br>Jay Treat<br>jc <br>Jean-Eudes Denis<br>Jesse Bradley<br>Jing Wang<br>Jingfeng Chen<br>Joe Sevits<br>Jonne Harja<br>Joost Gadellaa<br>Joseph Rocca<br>Josh 'Cheeseness' Bush<br>Josh Koenig<br>Joshua Horowitz<br>Joy Buolamwini<br>k3taminee<br>Kailys <br>Kalu <br>Karen Cooper<br>Kate Fractal<br>Kelly Reed<br>Kelvin Nishikawa<br>Kendra Lockman<br>Kevin Richardson<br>Kevin Simler<br>Kevin Zollman<br>KevinDeLand <br>Kien <br>Kimberly Lammi<br>Kwame Thomison<br>Kyle Buswell<br>Kyle Studstill<br>labratross <br>Landy Manderson<br>Laura <br>Laura Baldwin<br>Laurent COOPER<br>Lee Berman<br>Leopard Dan<br>Liyi Zhang<br>Lucas Garron<br>Lukas Peyer<br>Lydia Choy<br>M <br>Malte <br>Manuel Kueblboeck<br>Marc Cohen<br>Marc Marasco<br>Marguerite Dibble<br>Mark Guzdial<br>marko <br>Mary Bush<br>Mary C.<br>Matt Hughes<br>Matthew Campbell<br>Maura Dawes<br>Maxim Sidorov<br>Mercury Legba<br>Michael Donatz<br>Michael Handler<br>Michael Huff<br>Michael Slade<br>Michal Takáč<br>Mikayla <br>Mikey <br>Mikkel Snyder<br>Naomi Alderman<br>Nat Alison<br>Natalie Rothfels<br>Natalie Sun<br>Nelson Crespo<br>Nguyet Vuong<br>Nigel Kerr<br>Nikhil Harithas<br>Nikita Vasilyev<br>Nimrod Kimhi<br>Noah Richards<br>Orb Li<br>Pablo Molins<br>Patrick Henderson<br>Paul d'Aoust<br>Paul Sztajer<br>Phil Dougherty<br>Philip White<br>Pierre Thierry<br>Pixl Pixl<br>postmillenial <br>Przemek Piotrowski<br>Rachél Bazelais<br>Rae McIntosh<br>Rafael F.Font<br>Ralph Pantozzi<br>raspbeguy <br>Raymond Keller<br>Rebecca Thomas<br>Reed Copperstrand<br>Ridima Ramesh<br>Rob Howard<br>Rob McKaughan<br>Robert Aran<br>Robert Cobb<br>Robert Duncan<br>Rohit Bhat<br>Ruby Moore<br>S Smith<br>saianne <br>Sara Ness<br>Sasha Fenn<br>Scott Reynolds<br>Sean Riley<br>Sergey Dolgov<br>Shreeya Goel<br>Simon <br>Simon Morrow<br>slow.danger<br>Smarter Every Day<br>Sofia Razón<br>Soraya Een Hajji<br>Sorden <br>Srini Kadamati<br>Steve Cha<br>Steve Ryman<br>Steve Waldman<br>Stewart Burrows Brand<br>Stian Soltvedt<br>Stuart <br>Sylvain Francis<br>T <br>Tal Rotbart<br>Tamir Bahar<br>Thais Weiller<br>Thember <br>Tobias Rose-Stockwell<br>toby schachman<br>Todd Siegel<br>Tom Lieber<br>Tommy Maranges<br>Toph Tucker<br>Tyler Coleman<br>Victor Debrus<br>Vlad Dziuba<br>Vladimir <br>Wait But Why<br>Wesley Gardner<br>what's for dinner<br>Will Dayble<br>William B Everett<br>Wouter <br>Yan Naung Oak<br>Yohan Dash<br>Yu-Han Kuo<br>Zach Smith<br>Zan Armstrong<br>Zener <br>zubr kabbi<br>김슬<br>🐸
+		</div>
+
+		<br><br>
+
+		Y gracias <i>enormes</i> a estos tipos por probar los juegos y revisar el texto:
+		Alex Kreitzberg,
+		Amit Patel,
+		EmilyKate McDonough,
+		Emma Hodcroft,
+		Evan Rocha,
+		Gillian Tarr,
+		Grävling,
+		Kayle Sawyer,
+		Michael Huff,
+		Phil Dougherty,
+		Philipp Wacker,
+		Ridima Ramesh,
+		Sofia Razón,
+		Srini Kadamati,
+		Vi Hart
+
+		<br><br>
+
+		Cualquier error restante es seguramente fallo de Nicky.
+
+	</div>
+
+</div>
+
+<div id="footnotes_container">
+	<h2 id='show_feetnotes_button'>(Hacer clic para ver las notas al pie)</h2>
+	<h2 id='shown_feetnotes'>Notas al pie:</h2-->
+</div>
+
+<div id="wash">
+	¡Lávate las manos! 👏
+</div>
+
+
+</body>
+
+<script src="js/blerp.js"></script>
+<script src="js/littlefoot.js"></script>
+<script>
+littlefoot.littlefoot({
+	buttonTemplate:`
+	<button
+	  aria-controls="fncontent:<% id %>"
+	  aria-expanded="false"
+	  aria-label="Footnote <% number %>"
+	  class="littlefoot-footnote__button"
+	  id="<% reference %>"
+	  rel="footnote"
+	  title="See Footnote <% number %>"
+	/>
+	  <% number %>
+	</button>
+	`
+});
+</script>
+
+</html>
