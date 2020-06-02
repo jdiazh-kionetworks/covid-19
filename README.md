@@ -1,57 +1,15 @@
-[Play it here!](https://ncase.me/covid-19/)
+# RiesgosCOVID-19
 
-# How To Translate
+Sitio informativo sobre propagación de el COVID-19
 
-**NOTE: I'm still editing some stuff! Words will be finalized-ish on May 4th.
-You can start on stuff below, then check for new commits on the 4th to see what else to
-translate. You're wonderful, thank you! 💖**
+[Pandemia Alchemy Labs](https://pandemia.alchemylabs.cloud/)
 
-**NOTE 2: Sorry these instructions are really sloppy. Am writing this at midnight, rushing
-to publish this.**
+## ¿Quiénes somos?
 
-**NOTE 3: Indie gamedev is horrible.**
+Alchemy labs es el laboratorio de innovación de KIO Networks encargado de:
 
-Step 1)
+1. Apoyar en el camino de un proceso de innovación con el uso y aplicación de Metodologías.
 
-Check to see if it's already been translated to your language!
-Go to the main site, look at the left sidebar.
+2. Realizar experimentos de alto impacto para las personas, las organizaciones, México y el mundo.
 
-Step 2)
-
-If your language hasn't been done yet, check Github Issues to see if someone's already working on it.
-**If so:** help them!
-**If not:** fork this repo & link to your fork in a new Github Issue,
-announcing that you're translating for that language!
-
-Step 3)
-
-Translate `words.md`, (6000 words) then export it to html
-– make sure your Markdown app supports footnotes –
-and copy-paste that into the `<article></article>` part of `index.html`.
-
-Translate the `<head>`, sidebars, & footer of `index.html` (200 words)
-
-Translate the images in `/pics` (800 words)
-If you don't have image-editing software, ask for help on the Github Issue!
-
-Translate `sim/index.html` (100 words)
-
-Translate the thumbnail `sharing/thumbnail.png`
-
-Step 4)
-
-Use Github Pages to put your forked translation live on the interweb!
-
-Step 5)
-
-Send a Pull Request editing *just* `<div id="translations">` in `index.html`
-to add a link to your translation from the main page.
-
-Step 6)
-
-Wait for me to get off my lazy butt & accept the Pull Request (within \~72 hours? maybe?)
-
-Step 7)
-
-🎉 Party! Your translation should now be linked to from the main page.
-(Remember to close your Github Issue!)
+3. Todo esto de la mano de las nuevas tendencias tecnológicas como Inteligencia artificial (IA), Blockchain, Big Data, Internet of Things (Iot), Robótica (Drones), Smart cities, Interoperabilidad (X-Road).
